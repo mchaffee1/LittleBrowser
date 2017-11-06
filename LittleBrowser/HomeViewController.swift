@@ -1,18 +1,14 @@
-//
-//  ViewController.swift
-//  LittleBrowser
-//
-//  Created by Michael Chaffee on 11/6/17.
-//  Copyright © 2017 ThoughtWorks. All rights reserved.
-//
-
 import UIKit
+import WebKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var urlTextField: UITextField?
+
+    @IBOutlet weak var webView: WKWebView?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +16,13 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func goButton_TouchUpInside(_ sender: Any) {
+        guard
+            let urlString = urlTextField?.text,
+            let requestedUrl = URL(string: urlString)
+            else {return}
+        webView?.load(URLRequest(url: requestedUrl))
+    }
 
 }
 
