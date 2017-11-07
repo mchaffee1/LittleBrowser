@@ -25,7 +25,7 @@
                                         <rect key="frame" x="8" y="28" width="321" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" returnKeyType="go" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="url"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dE-Vu-axm" userLabel="GoButton">
                                         <rect key="frame" x="337" y="28" width="30" height="30"/>
@@ -52,7 +52,25 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="2AF-3j-R2L"/>
                                 </constraints>
-                                <items/>
+                                <items>
+                                    <barButtonItem title="👈" id="Hoi-Vz-1q0">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="👈:" destination="BYZ-38-t0r" id="UHQ-OW-GWL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="👉" id="1D2-cg-mE5">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="👉:" destination="BYZ-38-t0r" id="a6n-NC-IJY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="♻️" id="CWg-Xc-WXU">
+                                        <connections>
+                                            <action selector="reload:" destination="BYZ-38-t0r" id="AYA-jR-2wg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
                                 <color key="barTintColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                             <wkWebView contentMode="scaleToFill" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Es5-uc-5qw">

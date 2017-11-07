@@ -24,5 +24,16 @@ class HomeViewController: UIViewController {
         webView?.load(URLRequest(url: requestedUrl))
     }
 
+    @IBAction func 👈(_ sender: Any) {
+        webView?.goBack()
+    }
+
+    @IBAction func 👉(_ sender: Any) {
+        webView?.goForward()
+    }
+
+    @IBAction func reload(_ sender: Any) {
+        webView?.reload()
+    }
 }
 
