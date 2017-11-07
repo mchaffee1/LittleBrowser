@@ -13,7 +13,6 @@ class HomeViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     @IBAction func goButton_TouchUpInside(_ sender: Any) {
@@ -37,3 +36,8 @@ class HomeViewController: UIViewController {
     }
 }
 
+extension HomeViewController: WKNavigationDelegate {
+    // If you're troubleshooting third-party code that misimplements WKWebView, it's probably actually misimplementing
+    // WKNavigationDelegate...
+    // https://developer.apple.com/documentation/webkit/wknavigationdelegate
+}
